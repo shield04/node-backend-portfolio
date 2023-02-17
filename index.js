@@ -13,7 +13,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/portafolio')
 
             //Creacion del servidor
             app.listen(port, ()=>{
-                console.log("servidor corriendo correctamente en la url: localhost:3700")
+                console.log("servidor corriendo correctamente en la url: http://juandlosadaweb.com:3700") //localhost
             });
 
         })
