@@ -5,8 +5,6 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-const cors = require('cors');
-
 
 //Cargar archivos rutas
 var project_routes = require('./routes/project');
@@ -16,9 +14,6 @@ var project_routes = require('./routes/project');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: 'https://juandlosadaweb.com'
-}))
 
 //Configuracion de cabeceras y CORS
 
