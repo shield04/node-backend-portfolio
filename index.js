@@ -2,8 +2,8 @@
 
 var mongoose =  require('mongoose');
 var app = require('./app');
-//var port = 8080;
-var port = 3700;
+var port = 8080;
+//var port = 3700;
 //var port = 8443;
 
 
