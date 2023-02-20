@@ -18,7 +18,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/portafolio')
             //Creacion del servidor
             https.createServer({
                 key: fs.readFileSync('server.key'),
-                cert: fs.readFileSync('server.cert')
+                cert: fs.readFileSync('server.cer')
               },app)
               .listen(port, ()=>{
                 console.log("servidor corriendo correctamente en la url: http://localhost:3700") //localhost
