@@ -2,8 +2,10 @@
 
 var mongoose =  require('mongoose');
 var app = require('./app');
-var port = 8080;
-//var port = 3700;
+//var port = 443;
+var fs = require('fs');
+var https = require('https');
+var port = 3700;
 //var port = 8443;
 
 
@@ -14,7 +16,11 @@ mongoose.connect('mongodb://127.0.0.1:27017/portafolio')
             console.log("Conexion a la base de datos establecida satisfactoriamente...");
 
             //Creacion del servidor
-            app.listen(port, ()=>{
+            https.createServer({
+                key: fs.readFileSync('server.key'),
+                cert: fs.readFileSync('server.cert')
+              },app)
+              .listen(port, ()=>{
                 console.log("servidor corriendo correctamente en la url: http://localhost:3700") //localhost
             });
 
