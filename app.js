@@ -26,7 +26,11 @@ app.use((req, res, next) => {
 });
 
 //rutas
-
+app.use('/', (req, res) =>{
+        res.status(200).send(
+            "<h1>Proyectos</h1>"
+    );
+});
 app.use('/api', project_routes);
 
 
