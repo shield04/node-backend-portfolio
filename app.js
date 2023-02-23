@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 //rutas
-app.use('/', (req, res) =>{
+app.get('/', (req, res) =>{
         res.status(200).send(
             "<h1>Proyectos</h1>"
     );
