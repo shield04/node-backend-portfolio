@@ -7,13 +7,13 @@ var path = require('path');
 
 var controller = {
 
-    inicio: function(req, res){
+    /*inicio: function(req, res){
         return res.status(200).send({
             message: 'Soy la home'
             //"<h1>Projects</h1>"
     });
 
-    },
+    },*/
 
 
     home: function(req, res){
