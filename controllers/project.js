@@ -150,8 +150,8 @@ var controller = {
 
     getImageFile: function(req, res){
         var file = req.params.image;
-        //var path_file = './uploads/'+file;
-        var path_file = file;
+        var path_file = './uploads/'+file;
+        //var path_file = file;
 
         fs.exists(path_file, (exists) => {
             if(exists){
