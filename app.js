@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 var cors = require ('cors');
 app.use(cors({
-    origin:['https://backenjuandlosada.lat','https://juandlosadaweb.com'],
+    origin:['https://juandlosadaweb.com'],
     credentials:true
 }));
 
@@ -23,8 +23,8 @@ app.use(cors({
 //Configuracion de cabeceras y CORS
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://backenjuandlosada.lat'); //, 'https://backenjuandlosada.lat/'
-    res.header('Access-Control-Allow-Credentials', true); //Content-Type,
+    res.header('Access-Control-Allow-Origin', 'https://juandlosadaweb.com'); //, 'https://backenjuandlosada.lat/'
+    //res.header('Access-Control-Allow-Credentials', true); //Content-Type,
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Accept, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
